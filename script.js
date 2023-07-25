@@ -6,6 +6,8 @@ var generateBtn = document.querySelector("#generate");
 let upperAlphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 let numbers = [0,1,2,3,4,5,6,7,8,9];
 let builtArray = []
+
+
 function generatePassword(){
 
 if(confirm("Do you want your password to conatin lowercase letters?"))
@@ -13,12 +15,17 @@ if(confirm("Do you want your password to conatin lowercase letters?"))
 builtArray =[...builtArray, ...lowerAlphabet];
 
 }
+if(confirm("Do you want your password to conatin uppercase letters?"))
+{
+builtArray =[...builtArray,  ...upperAlphabet];
 
+}
 let password = "";
 
-let passwordLength =prompt('how long do you want your password to be?')
+let passwordLength =prompt('How long do you want your password to be?')
+console.log(passwordLength)
 
-for (let i = 0; i < passwordLength; i++); {
+for (let i = 0; i < passwordLength; i++){
 
   password += "x";
 }
