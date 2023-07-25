@@ -11,20 +11,20 @@ let builtArray = []
 
 function generatePassword(){
 
-if(confirm("Do you want your password to conatin lowercase letters?"))
+if(confirm("Do you want your password to contain lowercase letters?"))
 {
 builtArray =[...builtArray, ...lowerAlphabet];
 
 }
-if(confirm("Do you want your password to conatin uppercase letters?"))
+if(confirm("Do you want your password to contain uppercase letters?"))
 {
 builtArray =[...builtArray,  ...upperAlphabet];
 
 }
-if(confirm("Do you want your password to conatin numbers?"))
+if(confirm("Do you want your password to contain numbers?"))
 {builtArray=[...builtArray, ...numbers];}
 
-if(confirm("Do you want your password to conatin special characters?"))
+if(confirm("Do you want your password to contain special characters?"))
 {builtArray=[...builtArray, ...specialCharacters];}
 
 let password = "";
@@ -32,14 +32,15 @@ let password = "";
 let passwordLength =prompt('How long do you want your password to be?')
 console.log(passwordLength)
 
+console.log(builtArray)
 
 for (let i = 0; i < passwordLength; i++)
 
 {
-
-  password += "x";
+  // var item = items[Math.floor(Math.random()*items.length)];
+  password += builtArray[Math.floor(Math.random()*builtArray.length)];
 }
-
+console.log(password)
   return password;
 }
 
